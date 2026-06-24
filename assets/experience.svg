@@ -1,0 +1,71 @@
+<svg width="340" height="110" viewBox="0 0 340 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      /* r=32 → circumference ≈ 201; 80% fill → dashoffset target = 40 */
+      @keyframes fill-arc {
+        0%,100% { stroke-dashoffset: 201 }
+        55%,85% { stroke-dashoffset: 40  }
+      }
+      @keyframes tick {
+        0%,100% { opacity: .4 }
+        50%      { opacity: 1  }
+      }
+      .arc  { animation: fill-arc 3.6s ease-in-out infinite }
+      .dot1 { animation: tick 3.6s ease-in-out infinite }
+      .dot2 { animation: tick 3.6s ease-in-out infinite .45s }
+      .dot3 { animation: tick 3.6s ease-in-out infinite .9s  }
+      .dot4 { animation: tick 3.6s ease-in-out infinite 1.35s }
+      .dot5 { animation: tick 3.6s ease-in-out infinite 1.8s }
+      .dot6 { animation: tick 3.6s ease-in-out infinite 2.25s }
+      .dot7 { animation: tick 3.6s ease-in-out infinite 2.7s }
+      .dot8 { animation: tick 3.6s ease-in-out infinite 3.15s }
+    </style>
+  </defs>
+
+  <!-- Card -->
+  <rect width="340" height="110" rx="12" fill="#0D1117" stroke="#21262d" stroke-width="1.5"/>
+
+  <!-- Label -->
+  <text x="14" y="19" font-family="'Segoe UI',system-ui,sans-serif" font-size="8" font-weight="700"
+        letter-spacing="2.5" fill="#7c3aed" opacity=".75">EXPERIENCE</text>
+
+  <!-- Year tick dots (8 dots around the ring, like clock hours) -->
+  <!-- placed at r=46 from center (80, 57) -->
+  <circle cx="80"  cy="11"  r="3" fill="#7c3aed" class="dot1"/>  <!-- 12 o'clock  -->
+  <circle cx="126" cy="24"  r="3" fill="#7c3aed" class="dot2"/>  <!-- 1–2 o'clock  -->
+  <circle cx="126" cy="90"  r="3" fill="#7c3aed" class="dot3"/>  <!-- 4–5 o'clock  -->
+  <circle cx="80"  cy="103" r="3" fill="#7c3aed" class="dot4"/>  <!-- 6 o'clock    -->
+  <circle cx="34"  cy="90"  r="3" fill="#7c3aed" class="dot5"/>  <!-- 7–8 o'clock  -->
+  <circle cx="34"  cy="24"  r="3" fill="#7c3aed" class="dot6"/>  <!-- 10–11 o'clock-->
+  <circle cx="114" cy="12"  r="3" fill="#7c3aed" class="dot7"/>
+  <circle cx="46"  cy="12"  r="3" fill="#7c3aed" class="dot8"/>
+
+  <!-- Background track -->
+  <circle cx="80" cy="57" r="32" stroke="#21262d" stroke-width="6"/>
+  <!-- Subtle glow layer -->
+  <circle cx="80" cy="57" r="32" stroke="#7c3aed" stroke-width="6" stroke-opacity=".12"/>
+  <!-- Animated fill arc -->
+  <circle cx="80" cy="57" r="32"
+          stroke="#7c3aed" stroke-width="6" stroke-linecap="round"
+          stroke-dasharray="201" stroke-dashoffset="201"
+          transform="rotate(-90 80 57)"
+          class="arc"/>
+
+  <!-- Center text — dominant-baseline="middle" anchors at visual midpoint of glyphs,
+       so y=52 puts "8+" centered slightly above ring-midpoint and y=69 puts "YEARS" below,
+       making the two-line block visually centred at cy=57 -->
+  <text x="80" y="52" text-anchor="middle" dominant-baseline="middle"
+        font-family="'Segoe UI',system-ui,sans-serif"
+        font-size="26" font-weight="800" fill="#e6edf3">8+</text>
+  <text x="80" y="69" text-anchor="middle" dominant-baseline="middle"
+        font-family="'Segoe UI',system-ui,sans-serif"
+        font-size="8" font-weight="700" letter-spacing="1.5" fill="#8b949e">YEARS</text>
+
+  <!-- Right-side copy -->
+  <text x="150" y="45" font-family="'Segoe UI',system-ui,sans-serif"
+        font-size="13" fill="#8b949e">Years of hands-on</text>
+  <text x="150" y="63" font-family="'Segoe UI',system-ui,sans-serif"
+        font-size="13" fill="#8b949e">engineering across</text>
+  <text x="150" y="81" font-family="'Segoe UI',system-ui,sans-serif"
+        font-size="13" fill="#8b949e">web, cloud &amp; DevOps</text>
+</svg>

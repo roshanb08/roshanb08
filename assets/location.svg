@@ -1,0 +1,41 @@
+<svg width="340" height="110" viewBox="0 0 340 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @keyframes ping  { 0%{r:5;opacity:.85} 100%{r:20;opacity:0} }
+      @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-4px)} }
+      .r1 { animation: ping 2s ease-out infinite }
+      .r2 { animation: ping 2s ease-out infinite .9s }
+      .pin { animation: float 2.5s ease-in-out infinite; transform-origin: 200px 63px }
+    </style>
+  </defs>
+
+  <!-- Card -->
+  <rect width="340" height="110" rx="12" fill="#0D1117" stroke="#21262d" stroke-width="1.5"/>
+
+  <!-- Label -->
+  <text x="14" y="19" font-family="'Segoe UI',system-ui,sans-serif" font-size="8" font-weight="700"
+        letter-spacing="2.5" fill="#2563EB" opacity=".75">LOCATION</text>
+
+  <!-- Nepal silhouette -->
+  <!-- Path in 210×54 local space; western tip at (0,25), Mustang dip at (97,20),
+       northeast at (173,4), southern border near y=52-54 -->
+  <g transform="translate(65, 26)">
+    <path d="M 0,25 L 2,2 L 53,0 L 97,20 L 173,4 L 210,41 L 208,52 L 126,54 L 42,52 L 2,44 Z"
+          fill="#2563EB" fill-opacity=".14"
+          stroke="#2563EB" stroke-width="1.5" stroke-opacity=".65" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Kathmandu pulse rings (SVG: 200, 63) -->
+  <circle cx="200" cy="63" r="5" fill="none" stroke="#60a5fa" stroke-width="1.5" class="r1"/>
+  <circle cx="200" cy="63" r="5" fill="none" stroke="#60a5fa" stroke-width="1"  class="r2"/>
+
+  <!-- Pin dot -->
+  <g class="pin">
+    <circle cx="200" cy="63" r="6"   fill="#2563EB"/>
+    <circle cx="200" cy="63" r="2.5" fill="#ffffff"/>
+  </g>
+
+  <!-- City label -->
+  <text x="14" y="101" font-family="'Segoe UI',system-ui,sans-serif" font-size="17"
+        font-weight="700" fill="#e6edf3">Kathmandu, Nepal</text>
+</svg>

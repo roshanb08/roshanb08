@@ -1,0 +1,56 @@
+<svg width="340" height="110" viewBox="0 0 340 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @keyframes sparkle {
+        0%,100% { opacity: 0; transform: scale(.2) rotate(0deg)   }
+        40%,60%  { opacity: 1; transform: scale(1)  rotate(45deg)  }
+      }
+      @keyframes count-glow {
+        0%,100% { fill-opacity: 1    }
+        50%      { fill-opacity: .82  }
+      }
+      .s1 { animation: sparkle 2.8s ease-in-out infinite       }
+      .s2 { animation: sparkle 2.8s ease-in-out infinite .56s  }
+      .s3 { animation: sparkle 2.8s ease-in-out infinite 1.12s }
+      .s4 { animation: sparkle 2.8s ease-in-out infinite 1.68s }
+      .s5 { animation: sparkle 2.8s ease-in-out infinite 2.24s }
+      .num { animation: count-glow 2.8s ease-in-out infinite }
+    </style>
+    <linearGradient id="og" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#fb923c"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Card -->
+  <rect width="340" height="110" rx="12" fill="#0D1117" stroke="#21262d" stroke-width="1.5"/>
+
+  <!-- Label -->
+  <text x="14" y="19" font-family="'Segoe UI',system-ui,sans-serif" font-size="8" font-weight="700"
+        letter-spacing="2.5" fill="#f97316" opacity=".75">PROJECTS</text>
+
+  <!-- Sparkle stars (4-point) -->
+  <g transform="translate(36, 30)" class="s1">
+    <path d="M0,-6 L1.5,-1.5 L6,0 L1.5,1.5 L0,6 L-1.5,1.5 L-6,0 L-1.5,-1.5 Z" fill="#f97316"/>
+  </g>
+  <g transform="translate(305, 25)" class="s2">
+    <path d="M0,-7 L1.8,-1.8 L7,0 L1.8,1.8 L0,7 L-1.8,1.8 L-7,0 L-1.8,-1.8 Z" fill="#f97316"/>
+  </g>
+  <g transform="translate(22, 82)" class="s3">
+    <path d="M0,-5 L1.2,-1.2 L5,0 L1.2,1.2 L0,5 L-1.2,1.2 L-5,0 L-1.2,-1.2 Z" fill="#fb923c"/>
+  </g>
+  <g transform="translate(320, 78)" class="s4">
+    <path d="M0,-5 L1.5,-1.5 L5,0 L1.5,1.5 L0,5 L-1.5,1.5 L-5,0 L-1.5,-1.5 Z" fill="#fb923c"/>
+  </g>
+  <g transform="translate(170, 12)" class="s5">
+    <path d="M0,-4 L1,-1 L4,0 L1,1 L0,4 L-1,1 L-4,0 L-1,-1 Z" fill="#f97316"/>
+  </g>
+
+  <!-- Main counter -->
+  <text x="170" y="72" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
+        font-size="50" font-weight="800" fill="url(#og)" class="num">50+</text>
+
+  <!-- Sub-label -->
+  <text x="170" y="97" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
+        font-size="12" font-weight="500" letter-spacing=".5" fill="#8b949e">Projects Shipped</text>
+</svg>

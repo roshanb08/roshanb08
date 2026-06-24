@@ -1,0 +1,44 @@
+<svg width="340" height="110" viewBox="0 0 340 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @keyframes radar {
+        0%   { r: 8;  opacity: .8; stroke-width: 2   }
+        100% { r: 46; opacity: 0;  stroke-width: .5  }
+      }
+      @keyframes pulse-dot {
+        0%,100% { r: 7; fill-opacity: 1   }
+        50%      { r: 9; fill-opacity: .75 }
+      }
+      .w1 { animation: radar 2.8s ease-out infinite       }
+      .w2 { animation: radar 2.8s ease-out infinite .93s  }
+      .w3 { animation: radar 2.8s ease-out infinite 1.86s }
+      .dot { animation: pulse-dot 1.4s ease-in-out infinite }
+    </style>
+  </defs>
+
+  <!-- Card -->
+  <rect width="340" height="110" rx="12" fill="#0D1117" stroke="#21262d" stroke-width="1.5"/>
+
+  <!-- Label -->
+  <text x="14" y="19" font-family="'Segoe UI',system-ui,sans-serif" font-size="8" font-weight="700"
+        letter-spacing="2.5" fill="#22c55e" opacity=".75">STATUS</text>
+
+  <!-- Radar waves -->
+  <circle cx="170" cy="46" r="8" fill="none" stroke="#22c55e" class="w1"/>
+  <circle cx="170" cy="46" r="8" fill="none" stroke="#22c55e" class="w2"/>
+  <circle cx="170" cy="46" r="8" fill="none" stroke="#22c55e" class="w3"/>
+
+  <!-- Static inner ring -->
+  <circle cx="170" cy="46" r="16" fill="none" stroke="#22c55e" stroke-width="1" stroke-opacity=".2"/>
+
+  <!-- Center glow -->
+  <circle cx="170" cy="46" r="11" fill="#22c55e" fill-opacity=".1"/>
+  <!-- Pulsing core dot -->
+  <circle cx="170" cy="46" r="7" fill="#22c55e" class="dot"/>
+
+  <!-- Status text -->
+  <text x="170" y="82" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
+        font-size="19" font-weight="700" fill="#e6edf3">Available</text>
+  <text x="170" y="100" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
+        font-size="12" fill="#8b949e">Open to new projects</text>
+</svg>

@@ -1,0 +1,33 @@
+name: GitArtwork — Contribution Graph
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 0 * * 0"   # re-draw every Sunday so it stays fresh
+  workflow_dispatch:       # run manually any time from Actions tab
+
+jobs:
+  build:
+    name: Draw ROSHAN on contribution graph
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write      # needed to push the generated SVG back
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Generate gitartwork SVG
+        uses: jasineri/gitartwork@v1
+        with:
+          user_name: roshanb08
+          text: ROSHAN
+
+      - name: Commit & push gitartwork.svg
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add gitartwork.svg
+          git diff --cached --quiet || git commit -m "chore: update gitartwork SVG [skip ci]"
+          git push
